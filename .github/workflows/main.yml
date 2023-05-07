@@ -28,7 +28,7 @@ jobs:
   
     steps:
     - name: print all files in repo
-      run: ls
+      run: ls -la
       
     - name: run test.sh
       run: bash test.sh
