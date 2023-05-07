@@ -1,6 +1,9 @@
 
 name: course_action
 
+env:
+  SHA: "${{github.sha}}"
+
 on: 
   push:
     branches:
@@ -18,4 +21,4 @@ jobs:
       run: lsb_release -a
       
     - name: print sha of commit
-      run: github.sha
+      run: echo "${{env.SHA}}"
