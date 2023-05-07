@@ -54,7 +54,7 @@ jobs:
     - name: Print phone with secret
       run: |
         if [ "${{secrets.PHONE_SEC}}" == "123456" ]; then
-          echo "Phone number is 0548123456"
+          echo "Phone number is 0548321321"
         else
           echo "secret invalid"
         fi
