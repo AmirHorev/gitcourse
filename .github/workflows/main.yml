@@ -22,3 +22,13 @@ jobs:
       
     - name: print sha of commit
       run: echo "${{env.SHA}}"
+      
+  job2:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - name: print all files in repo
+      run: ls
+      
+    - name: run test.sh
+      run: test.sh
