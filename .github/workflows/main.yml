@@ -50,3 +50,11 @@ jobs:
       run: echo "Last name is $LAST_NAME"
       env:
         LAST_NAME: "hOREV"
+        
+    - name: Print phone with secret
+      run: |
+        if [ "${{secrets.PHONE_SEC}}" == "123456" ]; then
+          echo "Phone number is 0548123456"
+        else
+          echo "secret invalid"
+        fi
