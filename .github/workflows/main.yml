@@ -14,21 +14,24 @@ jobs:
     runs-on: ubuntu-latest
   
     steps:
-    - name: print hello
+    - name: Print hello
       run: echo "Hello"
       
-    - name: print version of ubuntu
+    - name: Print version of ubuntu
       run: lsb_release -a
       
-    - name: print sha of commit
+    - name: Print sha of commit
       run: echo "${{env.SHA}}"
       
   job2:
     runs-on: ubuntu-latest
   
     steps:
-    - name: print all files in repo
+    - name: Git clone
+      uses: actions/checkout@v1
+      
+    - name: Print all files in repo
       run: ls -la
       
-    - name: run test.sh
+    - name: Run test.sh
       run: bash test.sh
