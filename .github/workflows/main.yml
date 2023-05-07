@@ -31,4 +31,4 @@ jobs:
       run: ls
       
     - name: run test.sh
-      run: test.sh
+      run: bash test.sh
